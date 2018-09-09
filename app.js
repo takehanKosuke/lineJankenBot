@@ -23,6 +23,13 @@ function createReplyMessage(input) {
   } else {
     // 手からランダムに一つ選択
     text = hands[Math.floor(hands.length * Math.random())];
+    if (text - input === 1) {
+      text = "あなたの負けです"
+    }elsif(text - input === 0){
+      text = "あいこです"
+    }else{
+      text = "あなたの負けです"
+    }
   }
 
   return {
