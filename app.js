@@ -42,14 +42,6 @@ function createReplyMessage(input) {
   };
 }
 
-  return {
-    type: "text",
-    // 「text: text」のようにキー名と変数名が同じ場合、以下のように省略可能
-    // Object Shorthandという文法です
-    text
-  };
-}
-
 const server = express();
 
 server.use("/images", express.static(path.join(__dirname, "images")));
