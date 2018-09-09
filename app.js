@@ -26,11 +26,11 @@ function createReplyMessage(input) {
     i = Math.floor(hands.length * Math.random())
     hand = hands[i];
     if (i - youHand === 1) {
-      text = "$(hand)を出しました。あなたの勝ちです"
+      text = "${hand}を出しました。あなたの勝ちです"
     }else if(i - youHand === 0){
-      text = "$(hand)を出しました。あいこです"
+      text = "${hand}を出しました。あいこです"
     }else{
-      text = "$(hand)を出しました。あなたの負けです"
+      text = "${hand}を出しました。あなたの負けです"
     }
   }
 
