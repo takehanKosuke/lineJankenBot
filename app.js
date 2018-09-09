@@ -25,7 +25,7 @@ function createReplyMessage(input) {
     text = hands[Math.floor(hands.length * Math.random())];
     if (text - input === 1) {
       text = "あなたの負けです"
-    }elsif(text - input === 0){
+    }else if(text - input === 0){
       text = "あいこです"
     }else{
       text = "あなたの負けです"
