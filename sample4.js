@@ -14,7 +14,9 @@ function createReplyMessage(input) {
   const appUrl = process.env.HEROKU_APP_URL;
   return {
     type: "image",
+    // プレビューの表示
     previewImageUrl: `${appUrl}images/question.png`,
+    // タップされた後に表示する画像
     originalContentUrl: `${appUrl}images/answer.png`
   };
 
