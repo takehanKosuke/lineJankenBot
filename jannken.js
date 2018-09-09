@@ -3,7 +3,7 @@ function createReplyMessage(input) {
     const hands = ["グー", "チョキ", "パー"];
     // 返信メッセージを入れる変数
     let text;
-  
+
     youHand = hands.indexOf(input)
     // 配列.indexOf(引数) =>
     //   引数が配列の何番目（0始まり）にあるかを返す
@@ -23,7 +23,7 @@ function createReplyMessage(input) {
         console.log("あなたの負けです")
       }
     }
-  
+
     return {
       type: "text",
       // 「text: text」のようにキー名と変数名が同じ場合、以下のように省略可能
@@ -32,4 +32,4 @@ function createReplyMessage(input) {
     };
   }
 
-  createReplyMessage('グー')    
+  createReplyMessage('グー')
