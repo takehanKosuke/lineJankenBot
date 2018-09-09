@@ -14,15 +14,24 @@ function createReplyMessage(input) {
   // 返信メッセージを入れる変数
   let text;
 
+  youHand = hands.indexOf(input)
   // 配列.indexOf(引数) =>
   //   引数が配列の何番目（0始まり）にあるかを返す
   //   引数が配列にない場合、-1を返す
-  if (hands.indexOf(input) === -1) {
+  if (youHand === -1) {
     // ユーザーが入力した内容が「グー、チョキ、パー」以外だった場合
     text = "グー・チョキ・パーのどれかを入力してね";
   } else {
     // 手からランダムに一つ選択
-    text = hands[Math.floor(hands.length * Math.random())];
+    i = Math.floor(hands.length * Math.random())
+    hand = hands[i];
+    if (i - youHand === 1) {
+      text = `${hand}を出しました。あなたの勝ちです`
+    }else if(i - youHand === 0){
+      text = `${hand}を出しました。あいこです`
+    }else{
+      text = `${hand}を出しました。あなたの負けです`
+    }
   }
 
   return {
