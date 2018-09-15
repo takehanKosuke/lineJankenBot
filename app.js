@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const line = require("@line/bot-sdk");
+var pgManager = require('./postgresManager.js');
 
 const lineConfig = {
   channelAccessToken: process.env.LINE_CHANNEL_ACCESS_TOKEN,
