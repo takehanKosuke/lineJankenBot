@@ -2,6 +2,11 @@ const path = require("path");
 const express = require("express");
 const line = require("@line/bot-sdk");
 var pgManager = require('./postgresManager.js');
+const pg = require('pg');
+const config = require('/config/database.js'); // 先ほど定義したDB接続情報
+const pool = new pg.Pool(config.db.postgres); // プールで接続する（必須くさい）
+
+
 
 const lineConfig = {
   channelAccessToken: process.env.LINE_CHANNEL_ACCESS_TOKEN,
